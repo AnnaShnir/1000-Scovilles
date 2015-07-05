@@ -1,9 +1,9 @@
-# 1000-Scovilles
+# Anna Shnir
 
-### The Scoville scale 
+###  Web-Developer || Psychologist || Persona Extraordinaire
 
-is the measurement of the pungency (spicy heat) of chili peppers or other spicy foods as reported in Scoville heat units (SHU), a function of capsaicin concentration. The scale is named after its creator, American pharmacist Wilbur Scoville. His method, devised in 1912, is known as the Scoville Organoleptic Test.
+This is my resume website. More info to follow soon.
 
-##### NB: 1000 Scovilles is actually quite mellow.
+##### Side-note: Spicy Peppers FTW
 
 ![Pablano peppers FTW!](http://www.eatmorechiles.com/images/chilitemp.jpg)
