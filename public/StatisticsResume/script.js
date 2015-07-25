@@ -24,7 +24,7 @@ $(document).ready(function(event){
 
 	$(this).on("mousemove", function(event){
 
-		speed = 30;
+		speed = 25;
 
 		mouseX = event.pageX;
 		mouseY = event.pageY;
@@ -72,6 +72,7 @@ $(document).ready(function(event){
 	$(".items-row, .stat").on("mouseover", function(){
 
 		$(".cursor").addClass("focus");
+		//$(".sentence").addClass("focus");
 
 	}).on("mouseout", function(){
 
