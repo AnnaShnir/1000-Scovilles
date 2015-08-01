@@ -1,10 +1,17 @@
-$(document).ready(function(event){
+$(document).ready(function(event) {
   parallaxEnabled = true;
 
-	var mouseX = event.pageX;
-	var mouseY = event.pageY;
-	var windowWidth = $(window).width();
-	var	windowHeight = $(window).height();
+	var mouseX = event.pageX,
+	 mouseY = event.pageY,
+	 windowWidth = $(window).width(),
+	 windowHeight = $(window).height(),
+
+	 projects = {
+	 	'kafka': [ 'css', 'sqlite', 'ejs', 'nodejs' ],
+	 	'restaurant': [],
+	 	'party': [],
+	 	'ottermate': []
+	 }
   
   $("#lax").on("change", function(){
     var checked = $(this).prop("checked");
@@ -88,7 +95,28 @@ $(document).ready(function(event){
 		$(".item-info").remove();
 		$(this).parent().parent().find(".equipped").html(item);
 		$(this).html(current);
-
+		console.log(current);
 	});
+
+	// on clicking the project
+	$(".project").click(function() {
+		// combinations for projects:
+		// var kafkaTools = $(this).parent().parent().find(".equipped").html();
+
+		projects[$(this).attr('id')].forEach(
+			function(v, i) {
+				var skill = $('#s-' + v),
+				 equipped = skill.parent().parent().parent().find(".equipped").html(),
+				 item = skill.parent().html();
+
+				if (!skill.parent().hasClass('equipped')) {
+					$(".item-info").remove();
+					skill.parent().parent().parent().find(".equipped").html(item);
+					skill.parent().html(equipped);
+				}
+			}
+		);
+
+	})
 
 });
