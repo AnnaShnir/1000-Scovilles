@@ -8,9 +8,9 @@ $(document).ready(function(event) {
 
 	 projects = {
 	 	'kafka': [ 'css', 'sqlite', 'ejs', 'nodejs' ],
-	 	'restaurant': [],
-	 	'party': [],
-	 	'ottermate': []
+	 	'diner': ['backbone', 'sqlite', 'github', 'nodejs'],
+	 	'party': [ 'sass', 'rubyrails', 'postgre', 'github'],
+	 	'ottermate': [ 'angular', 'ajax', 'rails', 'sqlite']
 	 }
   
   $("#lax").on("change", function(){
@@ -101,8 +101,6 @@ $(document).ready(function(event) {
 	// on clicking the project
 	$(".project").click(function() {
 		// combinations for projects:
-		// var kafkaTools = $(this).parent().parent().find(".equipped").html();
-
 		projects[$(this).attr('id')].forEach(
 			function(v, i) {
 				var skill = $('#s-' + v),
